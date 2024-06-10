@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Air Quality Result</title>
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body style="background-image: url('/static/img/respic.jpg'); background-size: cover; background-position: center;">
+  <div class="container">
+    <h1>Air Quality Result for <%= airQuality.city %></h1>
+    <p>Overall AQI: <%= airQuality.overall_aqi %></p>
+    <ul>
+      <li>CO: Concentration <span class="concentration"><%= airQuality.CO.concentration %></span>, AQI <span class="aqi"><%= airQuality.CO.aqi %></span></li>
+      <li>PM10: Concentration <span class="concentration"><%= airQuality.PM10.concentration %></span>, AQI <span class="aqi"><%= airQuality.PM10.aqi %></span></li>
+      <li>SO2: Concentration <span class="concentration"><%= airQuality.SO2.concentration %></span>, AQI <span class="aqi"><%= airQuality.SO2.aqi %></span></li>
+      <li>PM2.5: Concentration <span class="concentration"><%= airQuality["PM2.5"].concentration %></span>, AQI <span class="aqi"><%= airQuality["PM2.5"].aqi %></span></li>
+      <li>O3: Concentration <span class="concentration"><%= airQuality.O3.concentration %></span>, AQI <span class="aqi"><%= airQuality.O3.aqi %></span></li>
+      <li>NO2: Concentration <span class="concentration"><%= airQuality.NO2.concentration %></span>, AQI <span class="aqi"><%= airQuality.NO2.aqi %></span></li>
+    </ul>
+  </div>
+</body>
+</html>
